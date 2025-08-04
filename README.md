@@ -62,7 +62,7 @@ git clone https://github.com/Nikitakolle/ToDoApp.git
 cd ToDoApp
 
 # 2. Configure database in appsettings.json
-# Set your actual connection string
+ Set your actual connection string
 
 # 3. Run migrations (if needed)
 dotnet ef database update
