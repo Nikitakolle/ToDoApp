@@ -47,6 +47,27 @@ Use the following dummy credentials to explore the app:
 ### 🗑️ Delete Task  
 <img width="1365" height="721" alt="Delete" src="https://github.com/user-attachments/assets/155245a4-7a7d-4f4f-9be9-a9254857bc15" />
 
+
+### 📁 Folder Structure
+
+
+ToDoApp/
+├── Controllers/            # MVC controllers
+│   ├── ToDoesController.cs # Handles task management
+│   └── AccountController.cs # Handles user authentication & authorization
+├── Models/                 # Entity Framework data models (e.g., User.cs, ToDo.cs)
+├── Views/                  # Razor views for UI
+│   ├── Account/            # Views for login, registration, etc.
+│   ├── ToDoes/             # Views for task CRUD operations
+│   └── Shared/             # Layouts and partial views shared across the app
+├── wwwroot/                # Static assets (CSS, JavaScript, images)
+├── Migrations/             # EF Core database migrations
+├── appsettings.json        # Application configuration (e.g., DB connection)
+├── Program.cs              # Application entry point
+├── Startup.cs              # Middleware and service configuration
+└── ToDoApp.csproj          # Project file
+
+
 ---
 
 ## 🧑‍💻 Getting Started
