@@ -57,17 +57,17 @@ Use the following dummy credentials to explore the app:
 
 ### 🛠️ Installation  
 
-# 1. Clone the repository
+### 1. Clone the repository
 git clone https://github.com/Nikitakolle/ToDoApp.git
 cd ToDoApp
 
-# 2. Configure database in appsettings.json
+### 2. Configure database in appsettings.json
  Set your actual connection string
 
-# 3. Run migrations (if needed)
+### 3. Run migrations (if needed)
 dotnet ef database update
 
-# 4. Run the application
+### 4. Run the application
 dotnet run
 
 
@@ -77,5 +77,4 @@ This project is for educational and portfolio purposes only.
 👤 Author
 Nikita Kolle
 GitHub: @Nikitakolle
-# 4. Run the application
-dotnet run
+
