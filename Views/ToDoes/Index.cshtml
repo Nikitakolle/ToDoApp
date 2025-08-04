@@ -1,0 +1,85 @@
+﻿@model IEnumerable<ToDoApp.Models.ToDo>
+
+@{
+    ViewData["Title"] = "Your Tasks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="dashboard-page">
+    <div class="container">
+        <h1 class="mb-4">Welcome, @User.Identity.Name!</h1>
+
+        <p>
+            <a asp-action="Create" class="btn btn-primary">➕ Add New Task</a>
+        </p>
+
+        <table class="table table-bordered table-striped">
+            <thead class="table-light">
+                <tr>
+                    <th>Title</th>
+                    <th>Completed</th>
+                    <th>Created At</th>
+                    <th>Completed At</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    var isOverdue = !item.IsDone && item.CreatedAt < DateTime.Now.AddDays(-3);
+                    var rowClass = item.IsDone ? "table-success" : isOverdue ? "table-danger" : "";
+
+                    <tr class="@rowClass">
+                        <td>@item.Title</td>
+                        <td>
+                            <span class="badge @(item.IsDone ? "bg-success" : isOverdue ? "bg-danger" : "bg-warning")">
+                                @(item.IsDone ? "Done" : isOverdue ? "Overdue" : "Pending")
+                            </span>
+                        </td>
+                        <td>@item.CreatedAt.ToString("yyyy-MM-dd HH:mm")</td>
+                        <td>
+                            @(item.CompletedAt?.ToString("yyyy-MM-dd HH:mm") ?? "-")
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-primary me-1" title="Edit Task">
+                                <i class="bi bi-pencil"></i> Edit
+                            </a>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info text-white me-1" title="View Details">
+                                <i class="bi bi-info-circle"></i> Details
+                            </a>
+                            <a asp-action="Delete" asp-route-id="@item.Id"
+                               class="btn btn-sm btn-danger"
+                               title="Delete Task">
+                                <i class="bi bi-trash"></i> Delete
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Delete Confirmation Modal (optional if you want to implement JS confirmation later) -->
+<!--
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete <strong id="taskTitle"></strong>?
+            </div>
+            <div class="modal-footer">
+                <form id="deleteForm" method="post">
+                    <input type="hidden" name="id" id="taskId" />
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+-->

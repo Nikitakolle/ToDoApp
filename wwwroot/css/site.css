@@ -1,0 +1,124 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+/* Background for Login and Register pages */
+.auth-page {
+    background: linear-gradient(to right, #a18cd1, #fbc2eb); /* soft purple to pink */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Container for Auth Forms */
+
+
+.auth-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Buttons inside auth-container */
+.auth-container .btn {
+    width: 100%;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.auth-container .btn-primary:hover {
+    background-color: #1a73e8;
+}
+
+/* Improve form control spacing */
+.auth-container .form-control {
+    font-size: 1rem;
+    padding: 0.75rem;
+}
+
+
+/* Shared background for Edit, Create, Details, Delete pages */
+.crud-page {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Optional: Form container styling for contrast */
+.crud-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Dashboard page */
+.dashboard-page {
+    background: linear-gradient(-97deg, #f8f9fa, #20c997,#0dcaf0,#495057,#495057, #ff6ec4);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    min-height: 100vh;
+    color: white;
+    padding: 2rem;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
