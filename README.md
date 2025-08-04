@@ -56,7 +56,7 @@ Use the following dummy credentials to explore the app:
 - SQL Server or a compatible database engine
 
 ### 🛠️ Installation  
-```bash
+
 # 1. Clone the repository
 git clone https://github.com/Nikitakolle/ToDoApp.git
 cd ToDoApp
