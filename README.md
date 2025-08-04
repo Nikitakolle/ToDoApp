@@ -26,7 +26,8 @@ Password: Reddy@123
 ## 📸 Project Preview
 
 🖼️ Login Page
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/43046977-8569-4516-866b-f0892277c621" />
+<img width="1364" height="722" alt="Login_1" src="https://github.com/user-attachments/assets/1a97f6f4-ad18-4dc5-8e50-1ba1972f17fc" />
+
 
 🖼️ Register Page
 <img width="1366" height="727" alt="Register" src="https://github.com/user-attachments/assets/e4a13583-f364-44f3-acb0-2f2e9ae8e5ec" />
